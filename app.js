@@ -1,3 +1,19 @@
+function succes(position){
+    console.log(position);
+}
+
+function error(){
+    alert("lokasi andas tidak dapat di akses");
+}
+
+function userLocation(){
+    if(!navigator.geolocation){
+        alert("geolocation tidak di dukung oleh browser anda");
+    }else{
+        navigator.geolocation.getCurrentPosition(succes,error);
+    }
+}
+
 function index(){
 
     let app = document.querySelector("#app");
@@ -5,6 +21,8 @@ function index(){
     h3.textContent = "Jadwal Shalat";
 
     app.appendChild(h3);
+
+    userLocation();
 }
 
 index();
