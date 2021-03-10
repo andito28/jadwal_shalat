@@ -1,5 +1,14 @@
+
+function jadwal_shalat(latitude,longitude){
+    fetch('http://api.aladhan.com/v1/calendar?latitude='+latitude+'&longitude='+longitude+'&method=2')
+    .then(response => response.json())
+    .then(function(response){
+       
+    });
+}
+
 function succes(position){
-    console.log(position);
+    jadwal_shalat(position.coords.latitude,position.coords.longitude);
 }
 
 function error(){
@@ -24,6 +33,7 @@ function index(){
 
     userLocation();
 }
+
 
 index();
 
