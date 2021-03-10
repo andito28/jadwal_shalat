@@ -3,7 +3,12 @@ function jadwal_shalat(latitude,longitude){
     fetch('http://api.aladhan.com/v1/calendar?latitude='+latitude+'&longitude='+longitude+'&method=2')
     .then(response => response.json())
     .then(function(response){
-       
+
+        let date = new Date();
+        let today = date.getDate() - 1;
+        let data = response.data[today].timings;
+
+        console.log(data);
     });
 }
 
