@@ -8,7 +8,22 @@ function jadwal_shalat(latitude,longitude){
         let today = date.getDate() - 1;
         let data = response.data[today].timings;
 
+        let table = document.createElement("table");
+        let app = document.querySelector("#app");
+        let tBody = document.createElement("tbody");
+
         console.log(data);
+        for(i in data){
+
+            let row = tBody.insertRow();
+            let name = row.insertCell(0);
+            let time = row.insertCell(1);
+            name.textContent = i;
+            time.textContent = data[i];
+            tBody.appendChild(row);   
+        }
+        table.appendChild(tBody);
+        app.appendChild(table);
     });
 }
 
