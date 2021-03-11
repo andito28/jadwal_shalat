@@ -1,0 +1,55 @@
+body{
+    font-family: sans-serif;
+    height: 650px;
+    background: linear-gradient(to bottom, #33ccff 0%,#ff99cc 100%);
+}
+
+#app{
+    width:400px;
+    margin:0px auto;
+}
+
+#app span{
+    color:white;
+    margin:0px;
+    padding: 0px;
+    position: relative;
+    top:73px;
+    left:128px;
+    text-align: center;
+    font-size:15px;
+}
+
+#app h3{
+    background-color:  #e2137b;
+    color:white;
+    text-align:center;
+    padding:10px;
+    padding-bottom:30px;
+    margin-bottom:0px;
+    letter-spacing: 3px;
+}
+
+#app table{
+    border-collapse: collapse;
+    width:100%;
+}
+
+
+#app table td{
+    padding:17px;
+}
+
+#app table td:last-child{
+    text-align: right;
+}
+
+#app table tr:nth-child(even){
+    background-color: #ffffff;
+}
+
+#app table tr:hover{
+    cursor:pointer;
+    background-color: #ff99cc;
+    color:white;
+}
