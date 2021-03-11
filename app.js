@@ -33,6 +33,8 @@ function succes(position){
 
 function error(){
     alert("lokasi andas tidak dapat di akses");
+    jadwal_shalat(-5.432937,120.205110);
+
 }
 
 function userLocation(){
